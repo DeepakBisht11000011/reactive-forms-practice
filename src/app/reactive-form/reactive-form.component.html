@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="container">
+    <form name="hexGen" [formGroup]="hexForm" class="form-group">
+      <div class="row">
+        <div class="col">
+          <label for="verifier">Code verifier</label>
+          <input
+            id="verifier"
+            name="code_verifier"
+            type="text"
+            formControlName="code_verifier"
+            maxlength="48"
+            class="form-control"
+          />
+        </div>
+        <div class="col">
+          <label for="challenge">Challenge</label>
+          <input
+            name="code_challenge"
+            type="text"
+            [readOnly]="true"
+            formControlName="code_challenge"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="mt-2">
+        <div class="d-inline mr -2">
+          <button
+            name="generate"
+            value="Generate"
+            class="btn btn-info"
+            (click)="handleGenerate()"
+          >
+            Generate
+          </button>
+        </div>
+        <div class="d-inline ml-2">
+          <button
+            name="generate"
+            value="Generate With Verifier"
+            class="btn btn-info"
+            (click)="handleVerifierGenerate()"
+          >
+            Generate With Verifier
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div>
+    <!-- <form>
+      <input />
+      <input />
+    </form> -->
+  </div>
+</div>
